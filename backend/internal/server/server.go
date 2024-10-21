@@ -4,7 +4,7 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"github.com/ben-haas/climate-compare/internal/config"
+	"github.com/ben-haas/climate-compare/backend/internal/config"
 	"github.com/gin-gonic/gin"
 	"log"
 	"net/http"

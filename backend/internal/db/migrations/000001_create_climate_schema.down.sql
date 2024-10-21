@@ -1,0 +1,2 @@
+DROP TABLE IF EXISTS places;
+DROP TABLE IF EXISTS climate_normals;

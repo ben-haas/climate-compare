@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/ben-haas/climate-compare/internal/config"
-	"github.com/ben-haas/climate-compare/internal/server"
+	"github.com/ben-haas/climate-compare/backend/internal/config"
+	"github.com/ben-haas/climate-compare/backend/internal/server"
 	"log"
 )
 
