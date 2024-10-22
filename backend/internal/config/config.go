@@ -12,9 +12,11 @@ type Config struct {
 	DBPass          string
 	DBName          string
 	ServerAddress   string
-	MeteoNormalsUrl string
-	MeteoHeader     string
+	MeteoBaseUrl    string
+	MeteoHeaderKey  string
 	MeteoApiKey     string
+	MeteoHeaderHost string
+	MeteoApiHost    string
 }
 
 func Load() (*Config, error) {
@@ -32,9 +34,11 @@ func Load() (*Config, error) {
 		DBPass:          getEnv("DB_PASS", ""),
 		DBName:          getEnv("DB_NAME", "climate"),
 		ServerAddress:   getEnv("SERVER_HOST", "localhost:8080"),
-		MeteoNormalsUrl: getEnv("METEO_NORMALS_URL", "https://api.example.com"),
-		MeteoHeader:     getEnv("METEO_HEADER_KEY", ""),
+		MeteoBaseUrl:    getEnv("METEO_BASE_URL", "https://api.example.com"),
+		MeteoHeaderKey:  getEnv("METEO_HEADER_KEY", "x-rapidapi-key"),
 		MeteoApiKey:     getEnv("METEO_API_KEY", ""),
+		MeteoHeaderHost: getEnv("METEO_HEADER_HOST", "x-rapidapi-host"),
+		MeteoApiHost:    getEnv("METEO_API_HOST", "meteostat.p.rapidapi.com"),
 	}
 
 	return config, nil
